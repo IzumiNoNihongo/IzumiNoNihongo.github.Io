@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INN Home</title>
+    <link rel="icon" href="gambar/bahan web gambar.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: rgb(255, 113, 113);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .logo h1 {
+            margin-left: 10px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        /* Desktop Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 15px;
+        }
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        /* Hamburger Icon for Mobile */
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* Mobile Navigation */
+        .nav-bar-mobile {
+            display: none;
+            flex-direction: column;
+            background-color: rgb(255, 113, 113);
+            position: absolute;
+            top: 60px;
+            width: 100%;
+            left: 0;
+        }
+        .nav-bar-mobile a {
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        /* Footer */
+        footer { 
+            background-color: rgb(255, 113, 113);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+
+         /* CTA Styles */
+         .cta-section {
+            background-color: #fff5e6;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+           
+        }
+
+        .cta-buttons .btn {
+            margin: 10px;
+            border: 15px;
+            padding: 10px 20px;
+            background-color: rgb(105, 105, 244);
+            text-decoration: none;
+            color: white;
+            
+        }
+
+        .cta-buttons .btn:hover {
+            background-color: rgb(95, 95, 229);
+        }
+/* Courses Styles */
+.courses-section {
+    padding: 60px 0;
+    background-color: #f9f9f9; /* Warna latar belakang yang lebih terang */
+    animation: fadeIn 1s forwards;
+}
+
+.courses-section h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px; /* Ukuran font lebih besar */
+    color: #444; /* Warna teks lebih gelap untuk kontras */
+    font-weight: 600; /* Menebalkan teks */
+}
+
+.courses {
+    display: flex;
+    justify-content: center; /* Memusatkan konten */
+    flex-wrap: wrap;
+    gap: 30px; /* Jarak yang lebih lebar antara kursus */
+    max-width: 1200px; /* Lebar maksimal */
+    margin: 0 auto; /* Memusatkan konten */
+}
+
+.course {
+    background-color: #ffffff; /* Warna latar belakang putih */
+    border-radius: 12px; /* Sudut yang lebih halus */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Bayangan lebih halus */
+    padding: 30px; /* Padding lebih besar */
+    margin: 10px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Efek transisi yang lebih halus */
+    border: 1px solid #e0e0e0; /* Garis batas halus */
+}
+
+.course:hover {
+    transform: translateY(-5px); /* Mengangkat sedikit saat hover */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Bayangan lebih dalam saat hover */
+    background-color: #f0f8ff; /* Warna latar belakang sedikit berbeda saat hover */
+}
+
+.course h4 {
+    font-size: 24px; /* Ukuran font judul yang lebih besar */
+    color: #333; /* Warna teks judul */
+    margin-bottom: 15px; /* Jarak di bawah judul */
+}
+
+.course p {
+    font-size: 16px; /* Ukuran font deskripsi yang lebih sesuai */
+    color: #666; /* Warna teks deskripsi */
+    line-height: 1.5; /* Jarak antar baris yang lebih baik */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .course {
+        width: calc(50% - 20px); /* 2 kolom di layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .course {
+        width: calc(100% - 20px); /* 1 kolom di layar sangat kecil */
+    }
+}
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .nav-bar-mobile.show {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="gambar/bahan web gambar.png">
+        <h1>INN</h1>
+    </div>
+    <nav>
+        <ul class="nav-bar">
+            <li><a href="Perpustakan.html">Perpustakaan</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <select name="language" id="language">
+                    <option value="id">ID</option>
+                    <option value="en">EN</option>
+                    <option value="jp">JP</option>
+                </select>
+            </li>
+        </ul>
+        <span class="hamburger" id="hamburger-menu">
+            <i class="fas fa-bars"></i>
+        </span>
+    </nav>
+</header>
+
+<div class="nav-bar-mobile" id="mobile-menu">
+    <a href="Perpustakan.html">Perpustakaan</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <select name="language" id="language-mobile" style="margin: 10px;">
+        <option value="id">ID</option>
+        <option value="en">EN</option>
+        <option value="jp">JP</option>
+    </select>
+</div>
+
+
+ <!-- Call to Action (CTA) -->
+ <section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2 data-translate="startAdventure">Mulai Petualangan Belajar Bahasa Jepang Anda Sekarang!</h2>
+            <p data-translate="joinUs">Bergabunglah dengan ribuan pelajar lainnya dan tingkatkan kemampuan bahasa Jepang Anda dengan metode yang menyenangkan dan interaktif.</p>
+            <div class="cta-buttons">
+                <a href="pendaftaran/Pendaftaran.html" class="btn btn-primary" data-translate="registerNow">Daftar Sekarang</a>
+                <a href="Maaf.html" class="btn btn-secondary" data-translate="tryFree">Coba Gratis</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Deskripsi Kursus -->
+<section class="courses-section">
+    <div class="container">
+        <h3 data-translate="offeredCourses">Papan Pengumuman</h3>
+        <div class="courses">
+            <div class="course" id="course1">
+                <h4 data-translate="beginnerCourse">Tentang web</h4>
+                <p data-translate="beginnerDesc">Wesite ini hanya akan bersifat sementara dan tidak bersifat permanen</p>
+            </div>
+            <div class="course" id="course2">
+                <h4 data-translate="intermediateCourse">Fitur</h4>
+                <p data-translate="intermediateDesc">Kami mohon maaf atas ketidaknyamanan ini. Beberapa fitur sedang dalam perawatan, sehingga sementara waktu beberapa fitur tidak dapat berfungsi. Terima kasih atas pengertian Anda.</p>
+            </div>
+            <div class="course" id="course3">
+                <h4 data-translate="advancedCourse">SEDANG DALAM PROSES</h4>
+                <p data-translate="advancedDesc">Mohon maaf banyak fitur yang mengalami bug. sekarang masih beta tes</p>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <p>&copy; 2024 Kursus Bahasa Jepang INN. All rights reserved.</p>
+    <a href="about.html">Tentang Kami</a> | 
+    <a href="kebijakan privasi.html">Kebijakan Privasi</a> |
+    <a href="cs.html">Customer Service</a>
+</footer>
+
+<script>
+    // Toggle mobile menu
+    document.getElementById('hamburger-menu').addEventListener('click', function() {
+        var mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('show');
+    });
+</script>
+
+</body>
+</html>
