@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INN N5</title>
+    <link rel="icon" href="../../gambar/bahan web gambar.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: rgb(255, 113, 113);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .logo h1 {
+            margin-left: 10px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        /* Desktop Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 15px;
+        }
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        /* Hamburger Icon for Mobile */
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* Mobile Navigation */
+        .nav-bar-mobile {
+            display: none;
+            flex-direction: column;
+            background-color: rgb(255, 113, 113);
+            position: absolute;
+            top: 60px;
+            width: 100%;
+            left: 0;
+        }
+        .nav-bar-mobile a {
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        /* Level Boxes */
+        .level-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .level-box {
+            border: 2px solid rgb(255, 113, 113);
+            border-radius: 10px;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            background-color: white;
+            text-decoration: none;
+            color: rgb(255, 113, 113);
+            font-size: 24px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .level-box:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgb(255, 113, 113);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .nav-bar-mobile.show {
+                display: flex;
+            }
+            .course {
+                width: calc(50% - 20px); /* 2 kolom di layar kecil */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .course {
+                width: calc(100% - 20px); /* 1 kolom di layar sangat kecil */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../../gambar/bahan web gambar.png" alt="Logo">
+        <h1>INN</h1>
+    </div>
+    <nav>
+        <ul class="nav-bar">
+            <li><a href="../N5 Index.html">Home</a></li>
+            <li><a href="../../Perpustakan.html">Perpustakaan</a></li>
+            <li><a href="../../contact.html">Contact</a></li>
+            <li>
+                <select name="language" id="language">
+                    <option value="id">ID</option>
+                    <option value="en">EN</option>
+                    <option value="jp">JP</option>
+                </select>
+            </li>
+        </ul>
+        <span class="hamburger" id="hamburger-menu">
+            <i class="fas fa-bars"></i>
+        </span>
+    </nav>
+</header>
+
+<div class="nav-bar-mobile" id="mobile-menu">
+    <a href="Home.html">Home</a>
+        <a href="Perpustakan.html">Perpustakaan</a>
+        <a href="contact.html">Contact</a>
+    <select name="language" id="language-mobile" style="margin: 10px;">
+        <option value="id">ID</option>
+        <option value="en">EN</option>
+        <option value="jp">JP</option>
+    </select>
+</div>
+
+<div class="level-container">
+    <!-- Generate level boxes, all linking to 'soal n4 v1.html' -->
+    <a href="soal n4 v1.html" class="level-box">1</a>
+    <a href="soal n4 v1.html" class="level-box">2</a>
+    <a href="soal n4 v1.html" class="level-box">3</a>
+    <a href="soal n4 v1.html" class="level-box">4</a>
+    <a href="soal n4 v1.html" class="level-box">5</a>
+    <a href="soal n4 v1.html" class="level-box">6</a>
+    <a href="soal n4 v1.html" class="level-box">7</a>
+    <a href="soal n4 v1.html" class="level-box">8</a>
+    <a href="soal n4 v1.html" class="level-box">9</a>
+    <a href="soal n4 v1.html" class="level-box">10</a>
+    <a href="soal n4 v1.html" class="level-box">11</a>
+    <a href="soal n4 v1.html" class="level-box">12</a>
+    <a href="soal n4 v1.html" class="level-box">13</a>
+    <a href="soal n4 v1.html" class="level-box">14</a>
+    <a href="soal n4 v1.html" class="level-box">15</a>
+    <a href="soal n4 v1.html" class="level-box">16</a>
+    <a href="soal n4 v1.html" class="level-box">17</a>
+    <a href="soal n4 v1.html" class="level-box">18</a>
+    <a href="soal n4 v1.html" class="level-box">19</a>
+    <a href="soal n4 v1.html" class="level-box">20</a>
+    <a href="soal n4 v1.html" class="level-box">21</a>
+    <a href="soal n4 v1.html" class="level-box">22</a>
+    <a href="soal n4 v1.html" class="level-box">23</a>
+    <a href="soal n4 v1.html" class="level-box">24</a>
+    <a href="soal n4 v1.html" class="level-box">25</a>
+    <a href="soal n4 v1.html" class="level-box">26</a>
+    <a href="soal n4 v1.html" class="level-box">27</a>
+    <a href="soal n4 v1.html" class="level-box">28</a>
+    <a href="soal n4 v1.html" class="level-box">29</a>
+    <a href="soal n4 v1.html" class="level-box">30</a>
+</div>
+
+<footer>
+    <p>&copy; 2024 Kursus Bahasa Jepang INN. All rights reserved.</p>
+    <a href="about.html">Tentang Kami</a> | 
+    <a href="kebijakan privasi.html">Kebijakan Privasi</a> |
+    <a href="cs.html">Customer Service</a>
+</footer>
+
+<script>
+    // Toggle mobile menu
+    document.getElementById('hamburger-menu').addEventListener('click', function() {
+        var mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('show');
+    });
+</script>
+
+</body>
+</html>

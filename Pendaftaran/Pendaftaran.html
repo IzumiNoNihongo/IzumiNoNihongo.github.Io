@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INN Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #fff;
+    }
+    
+    .container {
+        width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 2px solid #f7a7a7;
+        border-radius: 8px;
+        background-color: #fff;
+    }
+    
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .header h1 {
+        color: #2b5d41;
+        font-size: 28px;
+    }
+    
+    .header h2 {
+        color: #2b5d41;
+        font-size: 22px;
+        margin-top: 5px;
+    }
+    
+    .date {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+    .date span {
+        margin-right: 10px;
+        color: #2b5d41;
+    }
+    
+    .date-box {
+        width: 40px;
+        padding: 5px;
+        margin-right: 5px;
+        text-align: center;
+    }
+    
+    .section h3,h2,h1 {
+        background-color: #f7a7a7;
+        padding: 10px;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .form-row {
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    label {
+        flex-basis: 30%;
+        text-align: left;
+    }
+    
+    input[type="text"], input[type="email"] {
+        flex-basis: 65%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    
+    input[type="radio"] {
+        margin-left: 10px;
+    }
+    
+    .gender-row {
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .signature-row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    
+    .signature-box {
+        width: 250px;
+        border: none;
+        border-bottom: 1px solid #000;
+        margin-top: 5px;
+        pointer-events: none;
+    }
+
+    .button {
+        background-color: #04AA6D;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+    
+</style>
+<body>
+
+    <div class="container">
+        <form>
+            <div class="section">
+                <h1>Izumi No Nihongo</br>
+                    Pendaftaran Personal Information
+                </h1>
+            
+                <div class="form-row">
+                    <label for="fullName">Nama</label>
+                    <input type="text" id="fullName" name="fullName">
+                </div>
+
+                <div class="form-row">
+                    <label for="nickName">Nama panggilan:</label>
+                    <input type="text" id="nickName" name="nickName">
+                </div>
+
+                <div class="form-row">
+                    <label for="dob">Tanggal lahir:</label>
+                    <input type="text" class="date-box" maxlength="2" placeholder="tanggal">
+                    <input type="text" class="date-box" maxlength="2" placeholder="bulan">
+                    <input type="text" class="date-box" maxlength="4" placeholder="tahun">
+                </div>
+
+                <div class="form-row">
+                    <label for="birthPlace">Kota kelahiran:</label>
+                    <input type="text" id="birthPlace" name="birthPlace">
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="form-row gender-row">
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">laki-laki</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Perempuan</label>
+                    
+                    
+                </div>
+
+                <div class="form-row">
+                    <label for="country">Negara:</label>
+                    <input type="text" id="country" name="country">
+                </div>
+
+                <div class="form-row">
+                    <label for="nationality">Kebangasaan:</label>
+                    <input type="text" id="nationality" name="nationality">
+                </div>
+
+                <div class="form-row">
+                    <label for="domicile">Tinggal di kota:</label>
+                    <input type="text" id="domicile" name="domicile">
+                </div>
+
+                <div class="form-row">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" name="phone">
+                </div>
+
+                <div class="form-row">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address">
+                </div>
+
+                <div class="form-row">
+                    <label for="city">Kota:</label>
+                    <input type="text" id="city" name="city">
+                </div>
+
+                    <div class="form-row">
+                        <label>Agama:</label>
+                        <input type="text" class="signature-box" readonly>
+                    </div>           
+                </div>
+                <div>
+                    <a href="#" class="button">Pesan</a
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

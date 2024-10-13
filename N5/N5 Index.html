@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INN N5</title>
+    <link rel="icon" href="../gambar/bahan web gambar.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: rgb(255, 113, 113);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .logo h1 {
+            margin-left: 10px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        /* Desktop Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 15px;
+        }
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        /* Hamburger Icon for Mobile */
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* Mobile Navigation */
+        .nav-bar-mobile {
+            display: none;
+            flex-direction: column;
+            background-color: rgb(255, 113, 113);
+            position: absolute;
+            top: 60px;
+            width: 100%;
+            left: 0;
+        }
+        .nav-bar-mobile a {
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgb(255, 113, 113);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 300px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .course {
+        width: calc(50% - 20px); /* 2 kolom di layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .course {
+        width: calc(100% - 20px); /* 1 kolom di layar sangat kecil */
+    }
+}
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .nav-bar-mobile.show {
+                display: flex;
+            }
+        }
+
+        .category {
+            margin-top: 40px;
+        }
+
+        .category h2 {
+            border-bottom: 2px solid rgb(255, 113, 113);
+            padding-bottom: 10px;
+            color: rgb(255, 113, 113);
+        }
+
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+     /* Books container menggunakan grid untuk tata letak */
+.books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.thumbnail {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 220px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #f1f1f1; /* Tambahkan border halus */
+}
+
+.thumbnail:hover {
+    transform: translateY(-5px); /* Efek hover halus */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail h1, .thumbnail h3 {
+    margin: 0;
+    color: #007bff; /* Warna biru modern */
+    font-size: 24px; /* Ukuran lebih seragam */
+}
+
+.thumbnail p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff7171; /* Warna teks yang lebih lembut */
+}
+
+/* Grid layout responsif untuk berbagai ukuran layar */
+@media (max-width: 768px) {
+    .books {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .thumbnail {
+        width: 180px;
+    }
+}
+
+/* Menggunakan grid untuk tata letak yang lebih rapi */
+.books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+/* Styling untuk thumbnail box */
+.thumbnail {
+    background-color: #fff;
+    justify-content: space-between; 
+    padding: 30px;  /* Menambahkan lebih banyak ruang dalam box */
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 220px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #f1f1f1;
+}
+
+/* Menghilangkan garis bawah dari link */
+.thumbnail a {
+    text-decoration: none;
+}
+
+/* Efek hover untuk interaksi lebih baik */
+.thumbnail:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading H1 untuk tulisan N5 sampai N1 */
+.thumbnail h1 {
+    margin: 0;
+    color: #007bff;  /* Warna biru yang lebih modern */
+    font-size: 35px;  /* Ukuran heading yang lebih besar */
+    font-weight: bold;
+}
+
+/* Styling untuk tulisan di bawah H1 */
+.thumbnail p {
+    margin-top: auto; /* Menempatkan elemen ini di bagian bawah */
+    margin-bottom: 0; /* Menghilangkan margin bawah */
+    font-weight: bold;
+    color: #ff7171;  /* Warna merah yang lebih lembut */
+    font-size: 25px;  /* Ukuran yang lebih pas */
+
+}
+
+/* Responsif untuk tampilan di layar kecil */
+@media (max-width: 768px) {
+    .books {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .thumbnail {
+        width: 180px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../gambar/bahan web gambar.png">
+            <h1>INN</h1>
+        </div>
+        <h1>Perpustakaan</h1>
+        <nav>
+            <ul class="nav-bar">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Perpustakan.html">Perpustakaan</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <select name="language" id="language">
+                        <option value="id">ID</option>
+                        <option value="en">EN</option>
+                        <option value="jp">JP</option>
+                    </select>
+                </li>
+            </ul>
+            <span class="hamburger" id="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </span>
+        </nav>
+    </header>
+    
+    <div class="nav-bar-mobile" id="mobile-menu">
+        <a href="Home.html">Home</a>
+        <a href="Perpustakan.html">Perpustakaan</a>
+        <a href="contact.html">Contact</a>
+        <select name="language" id="language-mobile" style="margin: 10px;">
+            <option value="id">ID</option>
+            <option value="en">EN</option>
+            <option value="jp">JP</option>
+        </select>
+    </div>
+    
+
+
+        <!-- Kategori Utama: Pelajaran Umum -->
+        <div class="category">
+            <h2>Materi</h2>
+            <div class="books">
+                <div class="thumbnail">
+                    <a href="N5/N5.html">
+                        <h1>Latihan</h1>
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="Maaf.html">
+                        <h1>Bunpo</h1>
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="Maaf.html">
+                        <h1>Kosakata</h1>
+                        
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="Maaf.html">
+                        <h1>Kanji</h1>
+                       
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="Maaf.html">
+                        <h1>Membaca</h1>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+   
+
+        <footer>
+            <p>&copy; 2024 Kursus Bahasa Jepang INN. All rights reserved.</p>
+            <a href="about.html">Tentang Kami</a> | 
+            <a href="kebijakan privasi.html">Kebijakan Privasi</a> |
+            <a href="cs.html">Customer Service</a>
+        </footer>>
+    
+    
+    <script>
+        // Toggle mobile menu
+        document.getElementById('hamburger-menu').addEventListener('click', function() {
+            var mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

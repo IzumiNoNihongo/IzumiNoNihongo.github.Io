@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INN Custom Service</title>
+    <link rel="icon" href="gambar/bahan web gambar.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: rgb(255, 113, 113);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .logo h1 {
+            margin-left: 10px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        /* Desktop Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 15px;
+        }
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        /* Hamburger Icon for Mobile */
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* Mobile Navigation */
+        .nav-bar-mobile {
+            display: none;
+            flex-direction: column;
+            background-color: rgb(255, 113, 113);
+            position: absolute;
+            top: 60px;
+            width: 100%;
+            left: 0;
+        }
+        .nav-bar-mobile a {
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgb(255, 113, 113);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .course {
+        width: calc(50% - 20px); /* 2 kolom di layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .course {
+        width: calc(100% - 20px); /* 1 kolom di layar sangat kecil */
+    }
+}
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .nav-bar-mobile.show {
+                display: flex;
+            }
+        }
+
+        .Chat-AI {
+            width: 100%;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+        header {
+            background: rgb(255, 113, 113);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .Chatbox {
+            list-style: none;
+            padding: 20px;
+            height: 500px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .pesan {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 80%;
+            transition: background 0.3s;
+        }
+        .pesan.datang {
+            background: #e1f5fe;
+            align-self: flex-start;
+        }
+        .pesan.pergi {
+            background: rgb(255, 113, 113);
+            color: white;
+            align-self: flex-end;
+        }
+        .options {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .option-button {
+            background: rgb(255, 113, 113);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .option-button:hover {
+            background: rgba(255, 113, 113, 0.8);
+        }
+        .input-box {
+            display: none;
+            margin: 10px;
+        }
+        .input-box input {
+            padding: 10px;
+            width: calc(100% - 20px);
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .input-box button {
+            margin-top: 10px;
+            background: rgb(255, 113, 113);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .input-bug {
+            display: none;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        
+        .input-bug input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            transition: border 0.3s ease-in-out;
+        }
+        
+        .input-bug input[type="text"]:focus {
+            border: 1px solid rgb(255, 113, 113);
+        }
+        
+        .input-bug button[type="submit"] {
+            width: 100%;
+            background-color: rgb(255, 113, 113);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        .input-bug button[type="submit"]:hover {
+            background-color: rgba(255, 113, 113, 0.8);
+        }
+         
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="gambar/bahan web gambar.png">
+            <h1>INN</h1>
+        </div>
+        <h2>Aikoさん</h2>
+        <nav>
+            <ul class="nav-bar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Perpustakaan</a></li>
+                <li><a href="about.html">Tetang kami</a></li>
+                <li>
+                    <select name="language" id="language">
+                        <option value="id">ID</option>
+                        <option value="en">EN</option>
+                        <option value="jp">JP</option>
+                    </select>
+                </li>
+            </ul>
+            <span class="hamburger" id="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </span>
+        </nav>
+    </header>
+    
+    <div class="nav-bar-mobile" id="mobile-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Perpustakaan</a></li>
+        <li><a href="about.html">Tetang kami</a></li>
+        <select name="language" id="language-mobile" style="margin: 10px;">
+            <option value="id">ID</option>
+            <option value="en">EN</option>
+            <option value="jp">JP</option>
+        </select>
+    </div>
+    
+    
+        <ul class="Chatbox" id="chatbox">
+            <li class="pesan datang">Halo! Saya Aiko, bagaimana saya bisa membantu Anda hari ini?</li>
+        </ul>
+        <div class="options" id="options">
+            <button class="option-button" onclick="sendMessage('hai')">Hai</button>
+            <button class="option-button" onclick="sendMessage('apa kabar')">Apa kabar?</button>
+            <button class="option-button" onclick="sendMessage('produk')">Produk</button>
+        </div>
+
+        <!-- Form Input Box untuk "I have some idea" -->
+        <div class="input-box" id="inputBoxIdea">
+            <form action="https://sheetdb.io/api/v1/i232h3c7sx8p1" method="post" id="sheetdb-form">
+                <input type="text" name="data[some_idea]" id="userInputIdea" placeholder="Ketik ide Anda...">
+                <button type="submit">Kirim Ide</button>
+            </form>
+        </div>
+
+        <!-- Form Input Box untuk "Report some bug" -->
+        <div class="input-bug" id="inputBoxBug" style="display:none;">
+            <form action="https://api.web3forms.com/submit" method="POST" id="web3forms-form">
+                <input type="hidden" name="access_key" value="5e95bdb7-751c-4153-a606-8ec32658ec36">
+                <input type="text" name="data[bug]" id="userInputBug" placeholder="Jelaskan bug...">
+                <button type="submit">Kirim Bug</button>
+            </form>
+        </div>
+    </div>
+        
+
+        <footer>
+            <p>&copy; 2024Izumi No Nihongo. All rights reserved.</p>
+            <a href="about.html">Tentang Kami</a> | 
+            <a href="kebijakan privasi.html">Kebijakan Privasi</a> |
+            <a href="cs.html">Customer Service</a>
+        </footer>
+        
+
+    <script>
+        const responses = {
+            "hai": "Halo! Ada yang bisa saya bantu?",
+            "apa kabar": "Saya baik-baik saja! Bagaimana dengan Anda?",
+            "produk": "Kami menyediakan berbagai produk berkualitas. Ada yang bisa saya jelaskan lebih lanjut?"
+        };
+
+        function sendMessage(message) {
+            const chatbox = document.getElementById('chatbox');
+
+            // Tampilkan pesan pengguna
+            const userMessage = document.createElement('li');
+            userMessage.className = 'pesan pergi';
+            userMessage.textContent = message;
+            chatbox.appendChild(userMessage);
+
+            // Tampilkan balasan bot atau penanganan khusus
+            if (responses[message]) {
+                const botMessage = document.createElement('li');
+                botMessage.className = 'pesan datang';
+                botMessage.textContent = responses[message];
+                chatbox.appendChild(botMessage);
+            } else if (message === "I forget my account") {
+                const botMessage = document.createElement('li');
+                botMessage.className = 'pesan datang';
+                botMessage.textContent = "We don't have an account system in this website because the login and register page is under development.";
+                chatbox.appendChild(botMessage);
+            } else if (message === "I have some idea") {
+                // Tampilkan form input untuk ide
+                document.getElementById('options').style.display = 'none';
+                document.getElementById('inputBoxIdea').style.display = 'block';
+            } else if (message === "Report some bug") {
+                // Tampilkan form input untuk bug
+                document.getElementById('options').style.display = 'none';
+                document.getElementById('inputBoxBug').style.display = 'block';
+            }
+
+            chatbox.scrollTop = chatbox.scrollHeight; // Scroll ke bawah
+
+            if (message === 'hai' || message === 'apa kabar' || message === 'produk') {
+                document.getElementById('options').innerHTML = `
+                    <button class="option-button" onclick="sendMessage('I forget my account')">I forget my account</button>
+                    <button class="option-button" onclick="sendMessage('I have some idea')">I have some idea</button>
+                    <button class="option-button" onclick="sendMessage('Report some bug')">Report some bug</button>
+                `;
+            }
+        }
+
+        // Event listener untuk form SheetDB
+        var formIdea = document.getElementById('sheetdb-form'); 
+        formIdea.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(formIdea.action, {
+              method : "POST",
+              body: new FormData(formIdea),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            alert('Terima kasih atas ide Anda!');
+            document.getElementById('inputBoxIdea').style.display = 'none';
+          });
+        });
+
+         // Toggle mobile menu
+    document.getElementById('hamburger-menu').addEventListener('click', function() {
+        var mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('show');
+    }); 
+        
+    </script>
+</body>
+</html>

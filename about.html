@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INN About</title>
+    <link rel="icon" href="gambar/bahan web gambar.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: rgb(255, 113, 113);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .logo h1 {
+            margin-left: 10px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        /* Desktop Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 15px;
+        }
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        /* Vision and Mission Styles */
+        .visi-misi {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping */
+            justify-content: space-around;
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+        .visi, .misi {
+            background: white;
+            border: 2px solid rgb(255, 113, 113);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px; /* Added margin for spacing */
+            flex: 1 1 45%; /* Responsive width */
+            min-width: 300px; /* Ensure minimum width for smaller devices */
+            max-width: 500px; /* Ensure maximum width for larger devices */
+        }
+        .visi-misi div div { 
+            display: flex;        
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .visi-misi div p {
+            margin-left: 20px;
+            background-color: rgba(105, 105, 244, 0.566);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        div img {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        /* Hamburger Icon for Mobile */
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* Mobile Navigation */
+        .nav-bar-mobile {
+            display: none;
+            flex-direction: column;
+            background-color: rgb(255, 113, 113);
+            position: absolute;
+            top: 60px;
+            width: 100%;
+            left: 0;
+        }
+        .nav-bar-mobile a {
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgb(255, 113, 113);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+
+        .welcome, .about-us {
+            padding: 40px;
+            background-color: #f9f9f9;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .welcome h2, .about-us h2 {
+            color: rgb(255, 113, 113);
+        }
+
+        .welcome p, .about-us p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            /* ... existing responsive styles ... */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .nav-bar-mobile.show {
+                display: flex;
+            }
+            .visi-misi {
+                flex-direction: column;
+                align-items: center;
+            }
+            .visi, .misi {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="gambar/bahan web gambar.png">
+        <h1>INN</h1>
+    </div>
+    <nav>
+        <ul class="nav-bar"> 
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Perpustakan.html">Perpustakaan</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <select name="language" id="language">
+                    <option value="id">ID</option>
+                    <option value="en">EN</option>
+                    <option value="jp">JP</option>
+                </select>
+            </li>
+        </ul>
+        <span class="hamburger" id="hamburger-menu">
+            <i class="fas fa-bars"></i>
+        </span>
+    </nav>
+</header>
+
+<div class="nav-bar-mobile" id="mobile-menu">
+    <li><a href="Index.html">Home</a></li>
+    <li><a href="perpustakaan.html">Perpustakaan</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <select name="language" id="language-mobile" style="margin: 10px;">
+        <option value="id">ID</option>
+        <option value="en">EN</option>
+        <option value="jp">JP</option>
+    </select>
+</div>
+
+
+<section class="welcome">
+    <h2>Selamat Datang di Izumi No Nihongo</h2>
+    <p>Pusat belajar bahasa Jepang online yang menyediakan pendidikan berkualitas tinggi kepada siswa di seluruh dunia.</p>
+</section>
+
+<section class="visi-misi">
+    <div class="visi">
+        <div>
+            <img src="gambar/visi.jpg" alt="Vision Image">
+            <h1>Vision</h1>
+        </div>
+        <p>Membangun komunitas belajar yang produktif, aktif, inovatif, dan kreatif serta memahami budaya Jepang.</p>
+    </div>
+    <div class="misi">
+        <div>
+            <img src="gambar/misi.jpg" alt="Mission Image">
+            <h1>Mission</h1>
+        </div>
+        <p>Menyediakan sumber daya dan dukungan untuk belajar bahasa Jepang, memfasilitasi interaksi budaya, dan menciptakan lingkungan yang inspiratif untuk pengembangan diri.</p>
+    </div>
+</section>
+
+<section class="about-us">
+    <h2>Tentang Kami</h2>
+    <p>Izumi no Nihongo adalah pusat belajar bahasa Jepang online yang didedikasikan untuk menyediakan pendidikan berkualitas tinggi kepada siswa di seluruh dunia. Kami menawarkan berbagai program untuk semua tingkat kemampuan, dari pemula hingga lanjutan.</p>
+</section>
+
+
+<footer>
+    <p>&copy; 2024 Kursus Bahasa Jepang INN. All rights reserved.</p>
+    <a href="about.html">Tentang Kami</a> | 
+    <a href="kebijakan privasi.html">Kebijakan Privasi</a> |
+    <a href="cs.html">Customer Service</a>
+</footer>
+
+<script>
+    // Toggle mobile menu
+    document.getElementById('hamburger-menu').addEventListener('click', function() {
+        var mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('show');
+    });
+</script>
+
+</body>
+</html>

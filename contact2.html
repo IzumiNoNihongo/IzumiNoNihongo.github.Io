@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>INN &middot; Contact</title>
+        <link rel="icon" href="gambar/bahan web gambar.png" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+            body {
+                font-family: 'Poppins', sans-serif;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            header {
+                background-color: rgb(255, 113, 113);
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px;
+            }
+            .logo {
+                display: flex;
+                align-items: center;
+            }
+            .logo img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+            .logo h1 {
+                margin-left: 10px;
+                font-size: 24px;
+                font-weight: 600;
+            }
+    
+            /* Desktop Navigation */
+            nav ul {
+                list-style: none;
+                display: flex;
+                margin: 0;
+                padding: 0;
+            }
+            nav ul li {
+                margin-left: 20px;
+            }
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+                padding: 10px 15px;
+            }
+            nav ul li a:hover {
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 5px;
+            }
+    
+            .hamburger {
+                display: none;
+                font-size: 28px;
+                cursor: pointer;
+            }
+
+            .nav-bar-mobile {
+                display: none;
+                flex-direction: column;
+                background-color: rgb(255, 113, 113);
+                position: absolute;
+                top: 60px;
+                width: 100%;
+                left: 0;
+            }
+            .nav-bar-mobile a {
+                color: white;
+                padding: 15px;
+                text-decoration: none;
+                font-weight: 600;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                text-align: center;
+            }
+
+            .contact-container {
+                width: 100%;
+                height: 550px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .contact-container .contact {
+                color: white;
+                width: 95%;
+                height: 85%;
+                display: inline-flex;
+                overflow: hidden;
+                border-radius: 10px;
+                box-shadow:
+                    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+                    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            }
+            .contact-container .contact div {
+                width: 50%;
+                height: 100%;
+            }
+            .contact-container .contact .contact-details {
+                background-color: rgb(89, 89, 225);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .contact-container .contact .contact-details div {
+                width: 85%;
+                height: 95%;
+            }
+            .contact-container .contact div div .contact-input {
+                width: 100%;
+                height: 85%;
+            }
+            .contact-container .contact div div div h5 {
+                word-spacing: 1px;
+                letter-spacing: 1px;
+                padding: 5px;
+                padding-left: 0;
+            }
+            .contact-container .contact div div div h2 {
+                word-spacing: 1px;
+                letter-spacing: 1px;
+            }
+            .contact-container .contact div div div input {
+                color: white;
+                font-family: "Poppins", sans-serif;
+                width: 100%;
+                display: block;
+                padding: 8px;
+                padding-left: 0;
+                margin-bottom: 10px;
+                background: none;
+                border: none;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+                outline: none;
+            }
+            .contact-container .contact div div input::placeholder {
+                color: rgba(255, 255, 255, 0.7);;
+                font-family: "Poppins", sans-serif;
+            }
+            .contact-container .contact div div input:focus {
+                border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+            }
+            .contact-container .contact div div label {
+                font-size: 14px;
+                margin-right: 10px;
+            }
+            .contact-container .contact div div select {
+                font-family: "Poppins", sans-serif;
+                border: none;
+                outline: none;
+                border-radius: 3px;
+                margin-top: 3px;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+            
+            .contact-container .contact div div .action-buttons {
+                width: 100%;
+                height: 15%;
+                display: inline-flex;
+            }
+            .contact-container .contact div div .action-buttons .ab-wa,
+            .contact-container .contact div div .action-buttons .ab-ml {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .contact-container .contact div div .action-buttons .ab-wa button,
+            .contact-container .contact div div .action-buttons .ab-ml button {
+                width: 70%;
+                height: 60%;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                font-family: "Poppins", sans-serif;
+                font-weight: 600;
+            }
+            .contact-container .contact div div .action-buttons .ab-wa button {
+                background-color: #25D366;
+            }
+            .contact-container .contact div div .action-buttons .ab-ml button {
+                background-color: orange;
+            }
+
+            /* Sidebar */
+            .sidebar {
+                padding: 20px;
+                background-color: #f4f4f4;
+                color: #333;
+            }
+            .sidebar h2 {
+                margin-bottom: 15px;
+            }
+            .sidebar p {
+                margin-bottom: 10px;
+            }
+
+            /* Footer */
+        footer {
+            background-color: rgb(255, 113, 113);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 20px; /* Ukuran ikon */
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+
+            @media (max-width: 768px) {
+                nav ul {
+                    display: none;
+                }
+                .hamburger {
+                    display: block;
+                }
+                .nav-bar-mobile.show {
+                    display: flex;
+                }
+                .contact-container {
+                    width: 100%;
+                    height: 720px;
+                }
+                .contact-container .contact {
+                    width: 90%;
+                    height: 90%;
+                    display: block;
+                }
+                .contact-container .contact div {
+                    width: 100%;
+                    height: 50%;
+                }
+                .contact-container .contact div div .action-buttons .ab-wa button,
+                .contact-container .contact div div .action-buttons .ab-ml button {
+                    width: 70%;
+                    height: 85%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="gambar/bahan web gambar.png">
+                <h1>INN</h1>
+            </div>
+            <nav>
+                <ul class="nav-bar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Perpustakaan</a></li>
+                    <li><a href="about.html">Tetang kami</a></li>
+                    <li>
+                        <select name="language" id="language">
+                            <option value="id">ID</option>
+                            <option value="en">EN</option>
+                            <option value="jp">JP</option>
+                        </select>
+                    </li>
+                </ul>
+                <span class="hamburger" id="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </nav>
+        </header>
+        
+        <div class="nav-bar-mobile" id="mobile-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Perpustakaan</a></li>
+            <li><a href="about.html">Tetang kami</a></li>
+            <select name="language" id="language-mobile" style="margin: 10px;">
+                <option value="id">ID</option>
+                <option value="en">EN</option>
+                <option value="jp">JP</option>
+            </select>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact">
+                <div class="contact-details">
+                    <div>
+                        <div class="contact-input">
+                            <h5>TELL US ABOUT YOUR MESSAGE</h5>
+                            <h2>How Can We Help You?</h2>
+                            
+                            
+                            <form action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="5e95bdb7-751c-4153-a606-8ec32658ec36">
+                                
+                                <input type="text" name="data[Your Name]" placeholder="Your Name *" required>
+                                <input type="email" name="data[Your Email]" placeholder="Your Email *" required>
+                                 <input type="tel" name="data[Your Phone]" placeholder="Your Phone *" required>
+                                 <input type="tel" name="data[Report problem]" placeholder="Report problem *" required>
+                              
+                                 <textarea input name="data[message]" required placeholder="Type your message here..." style="
+                                 width: 100%;
+                                 height: 120px;
+                                 padding: 10px;
+                                 border: none;
+                                 border-radius: 5px;
+                                 background-color: rgba(255, 255, 255, 0.1);
+                                 color: white;
+                                 font-family: 'Poppins', sans-serif;
+                                 resize: none;
+                                 outline: none;
+                                 box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px;
+                             "></textarea>
+                             
+                        </div>
+                        <div class="action-buttons">
+                            <div class="ab-ml">
+                                <button type="submit">kirimkan</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <h2>Contact Us</h2>
+                    <h3 class="tiga">Konnichiwa, mina-san! Kami siap melayani Anda setiap hari dari jam 7 pagi hingga 9 malam. Untuk pertanyaan atau saran, silakan hubungi kami!</h3>
+                    <p><strong class="material-symbols-outlined">phone</strong>  Masih dalam tahap pengembangan</p>
+                    <p><strong class="material-symbols-outlined">mail</strong>  Masih dalam tahap pengembangan</p>
+                    <p><strong class="material-symbols-outlined">location_on</strong> Palembang</p>
+                    <p>Jika Anda mengalami error, silakan <a href="cs.html">hubungi contact</a> kami.</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024Izumi No Nihongo. All rights reserved.</p>
+            <a href="about.html">Tentang Kami</a> | 
+            <a href="kebijakan privasi.html">Kebijakan Privasi</a> |
+            <a href="cs.html">Customer Service</a>
+        </footer>
+        
+
+        <script>
+            document.getElementById('hamburger-menu').addEventListener('click', function () {
+                var mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.toggle('show');
+            });
+
+            var form = document.getElementById('sheetdb-form');
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method : "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+    }).then(
+        response => response.json()
+    ).then((html) => {
+      // you can put any JS code here
+      alert('success')
+    });
+  });
+  
+
+        </script>
+    </body>
+</html>
+

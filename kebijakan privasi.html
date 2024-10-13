@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> INN Kebijakan Privasi</title>
+    <link rel="icon" href="gambar/bahan web gambar.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: rgb(255, 113, 113);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .logo h1 {
+            margin-left: 10px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        /* Desktop Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 15px;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        /* Hamburger Icon for Mobile */
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* Mobile Navigation */
+        .nav-bar-mobile {
+            display: none;
+            flex-direction: column;
+            background-color: rgb(255, 113, 113);
+            position: absolute;
+            top: 60px;
+            width: 100%;
+            left: 0;
+        }
+
+        .nav-bar-mobile a {
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgb(255, 113, 113);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+
+        /* Accordion Styles */
+        .accordion {
+            margin-top: 20px;
+        }
+
+        .accordion-item {
+            margin-bottom: 10px;
+        }
+
+        .accordion-header {
+            width: 100%;
+            background-color: #0073e6;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background-color: #005bb5;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 15px;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            border-top: none;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-bar-mobile.show {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .accordion-item {
+                width: calc(100% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="gambar/bahan web gambar.png" alt="Logo INN">
+        <h1>INN</h1>
+    </div>
+    <h1>Kebijakan Privasi</h1>
+    <nav>
+        <ul class="nav-bar">
+            <li><a href="Perpustakan.html">Perpustakaan</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <select name="language" id="language">
+                    <option value="id">ID</option>
+                    <option value="en">EN</option>
+                    <option value="jp">JP</option>
+                </select>
+            </li>
+        </ul>
+        <span class="hamburger" id="hamburger-menu">
+            <i class="fas fa-bars"></i>
+        </span>
+    </nav>
+</header>
+
+<!-- Accordion for Kebijakan Privasi -->
+<div class="accordion">
+    <div class="accordion-item">
+        <button class="accordion-header">Perkenalan</button>
+        <div class="accordion-content">
+            <p>Selamat datang di Izumi no Nihongo! Kami sangat menghargai privasi Anda. Kebijakan privasi ini menjelaskan jenis informasi yang kami kumpulkan, bagaimana kami menggunakannya, dan langkah-langkah yang kami ambil untuk melindungi informasi Anda. Kami berkomitmen untuk menjaga kepercayaan Anda dan memastikan bahwa pengalaman Anda di situs kami aman dan menyenangkan, sesuai dengan peraturan privasi yang berlaku seperti GDPR, CCPA, dan undang-undang lainnya.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">Bagaimana Untuk Menghubungi Kami</button>
+        <div class="accordion-content">
+            <p>Jika Anda memiliki pertanyaan atau kekhawatiran tentang kebijakan privasi ini, jangan ragu untuk menghubungi kami melalui email di <a href="mailto:contact@izuminonihongo.com">contact@izuminonihongo.com</a>. Kami siap membantu Anda!</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">Informasi Yang Kami Kumpulkan</button>
+        <div class="accordion-content">
+            <p>Kami mengumpulkan informasi pribadi seperti nama, alamat email, alamat, dan informasi lainnya yang relevan saat Anda mendaftar, berinteraksi dengan kami, atau menggunakan layanan kami. Kami juga dapat mengumpulkan informasi non-pribadi, seperti data penggunaan dan preferensi, untuk meningkatkan pengalaman Anda.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">Apa yang Kami Lakukan dengan Informasi Anda</button>
+        <div class="accordion-content">
+            <p>Informasi pribadi Anda digunakan untuk:</p>
+            <ul>
+                <li>Menyediakan layanan dan dukungan yang lebih baik.</li>
+                <li>Menyesuaikan pengalaman Anda di situs kami.</li>
+                <li>Meningkatkan kualitas layanan dan produk kami.</li>
+                <li>Berkomunikasi dengan Anda mengenai pembaruan, penawaran, dan informasi penting lainnya.</li>
+            </ul>
+            <p>Kami memastikan penggunaan data pribadi Anda mematuhi undang-undang seperti GDPR, CCPA, dan peraturan terkait lainnya. Anda berhak menarik persetujuan, mengakses, mengubah, atau menghapus data Anda kapan saja.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">Keamanan</button>
+        <div class="accordion-content">
+            <p>Kami berkomitmen untuk melindungi informasi Anda. Kami menerapkan langkah-langkah keamanan fisik, elektronik, dan prosedural yang sesuai untuk mencegah akses yang tidak sah, pengungkapan, atau penghancuran informasi pribadi Anda. Kami terus memantau dan memperbarui prosedur keamanan kami untuk menjaga informasi Anda tetap aman.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">Sertifikat dan Penggunaan Pihak Ketiga</button>
+        <div class="accordion-content">
+            <p>Kami mungkin menggunakan layanan pihak ketiga untuk memproses atau menyimpan informasi Anda, termasuk analitik, pengiriman email, dan layanan pembayaran. Kami memastikan bahwa semua pihak ketiga tersebut mematuhi kebijakan privasi yang ketat dan menjaga keamanan data Anda. Kami tidak akan menjual atau menyewakan informasi pribadi Anda kepada pihak ketiga tanpa persetujuan Anda.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">Link ke Situs Lain</button>
+        <div class="accordion-content">
+            <p>Situs web kami mungkin mengandung tautan ke situs eksternal. Kami tidak bertanggung jawab atas praktik privasi atau konten yang ada di situs-situs tersebut. Kami sarankan Anda untuk membaca kebijakan privasi setiap situs yang Anda kunjungi untuk memahami bagaimana informasi Anda akan digunakan.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">Catatan Khusus untuk Pengguna Internasional</button>
+        <div class="accordion-content">
+            <p>Jika Anda mengakses situs kami dari luar Indonesia, perlu diingat bahwa data Anda dapat dipindahkan, disimpan, dan diproses di Indonesia atau negara lain di mana kami beroperasi. Dengan menggunakan situs kami, Anda menyetujui transfer data tersebut. Kami akan mengambil langkah-langkah yang wajar untuk melindungi data Anda sesuai dengan kebijakan privasi ini, serta mematuhi undang-undang seperti GDPR dan peraturan privasi lainnya yang relevan.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">Hak Anda (Sesuai GDPR, CCPA, dan Undang-Undang Lainnya)</button>
+        <div class="accordion-content">
+            <p>Anda memiliki hak-hak berikut terkait informasi pribadi Anda:</p>
+            <ul>
+                <li><strong>Hak Akses</strong>: Meminta salinan data pribadi yang kami simpan tentang Anda.</li>
+                <li><strong>Hak untuk Memperbaiki</strong>: Meminta perbaikan jika ada kesalahan pada data Anda.</li>
+                <li><strong>Hak untuk Menghapus</strong>: Meminta penghapusan data pribadi Anda dalam kondisi tertentu.</li>
+                <li><strong>Hak untuk Menarik Persetujuan</strong>: Menarik persetujuan yang Anda berikan kapan saja.</li>
+                <li><strong>Hak Portabilitas Data</strong>: Meminta salinan data dalam format yang dapat dibaca komputer.</li>
+            </ul>
+            <p>Untuk menggunakan hak-hak Anda, silakan hubungi kami di <a href="mailto:contact@izuminonihongo.com">contact@izuminonihongo.com</a>.</p>
+        </div>
+    </div>
+</div>
+
+
+    
+
+<footer>
+    <p>&copy; 2024 Kursus Bahasa Jepang INN. All rights reserved.</p>
+    <a href="about.html">Tentang Kami</a> | 
+    <a href="kebijakan privasi.html">Kebijakan Privasi</a> |
+    <a href="cs.html">Customer Service</a>
+</footer>
+
+
+<script>
+    // Toggle mobile menu
+    document.getElementById('hamburger-menu').addEventListener('click', function () {
+        var mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('show');
+    });
+
+    // Toggle accordion sections
+    var headers = document.querySelectorAll(".accordion-header");
+    headers.forEach(function (header) {
+        header.addEventListener("click", function () {
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

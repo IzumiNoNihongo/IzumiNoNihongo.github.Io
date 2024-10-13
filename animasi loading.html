@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INN Loading Animation</title>
+    <link rel="icon" href="gambar/bahan web gambar.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9; /* Warna latar belakang yang lebih terang */
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .loader {
+            display: flex;
+            opacity: 1; /* Memastikan loader selalu terlihat */
+            font-size: 10vw; /* Ukuran huruf responsif berdasarkan lebar viewport */
+        }
+
+        .loader span {
+            opacity: 0;
+            animation: appear 0.5s forwards, blink 1s infinite; /* Animasi berkedip tanpa henti */
+            color: rgb(255, 113, 113); /* Warna teks sesuai dengan header */
+        }
+
+        .loader span:nth-child(1) {
+            animation-delay: 0s, 0s;
+        }
+
+        .loader span:nth-child(2) {
+            animation-delay: 0.5s, 0.2s;
+        }
+
+        .loader span:nth-child(3) {
+            animation-delay: 1s, 0.4s;
+        }
+
+        @keyframes appear {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.2;
+            }
+        }
+
+        /* Media Queries untuk ukuran huruf yang lebih kecil pada perangkat mobile */
+        @media (max-width: 768px) {
+            .loader {
+                font-size: 8vw; /* Ukuran lebih kecil untuk tablet dan ponsel */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .loader {
+                font-size: 12vw; /* Ukuran lebih besar untuk ponsel agar tetap terlihat */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <span>I</span>
+        <span>N</span>
+        <span>N</span>
+    </div>
+
+    <script>
+        const loader = document.querySelector('.loader');
+        loader.style.opacity = 1; // Memastikan loader terlihat langsung
+    </script>
+</body>
+</html>
