@@ -1,125 +1,190 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INN</title>
-    <link rel="stylesheet" href="gambar/bahan web gambar.png">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #74ebd5, #acb6e5);
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        .container {
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .container:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: #ff6347;
-            text-shadow: 2px 2px 5px rgba(255, 99, 71, 0.5);
-        }
-
-        p {
-            font-size: 24px;
-            margin: 0;
-            color: #555;
-            animation: fadeIn 1s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 18px;
-            color: white;
-            background-color: #ff6347;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .button:hover {
-            background-color: #ff4500;
-        }
-
-        .background-animation {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center/cover;
-            filter: blur(8px);
-            z-index: -1;
-            animation: zoom 20s infinite alternate;
-        }
-
-        @keyframes zoom {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.1);
-            }
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 36px;
-            }
-
-            p {
-                font-size: 20px;
-            }
-        }
-    </style>
+    <title>言葉</title>
+    <link rel="stylesheet" href="../../../css/table.css">
 </head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+      h1 {
+        text-align: center;
+        color: #007acc;
+        margin-top: 20px;
+      }
+      nav {
+        background-color: #007acc;
+        padding: 10px 0;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li {
+        margin: 0 15px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      nav ul li a:hover {
+        text-decoration: underline;
+      }
+      section {
+        padding: 20px;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 1200px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+      }
+      th {
+        background-color: #007acc;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      tr:hover {
+        background-color: #eaeaea;
+      }
+</style>
 <body>
-    <div class="background-animation"></div>
-    <div class="container">
-        <h1>MAAF</h1>
-        <p>SEDANG KAMI SEDANG MELAKUKAN</p>
-        <button class="button" onclick="goHome()">Kembali ke Home</button>
-    </div>
+    <section id="aisatsu">
+        <h2>(Aisatsu) saat ketemuan</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ことば</th>
+              <th>かんじ</th>
+              <th>いみ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>おはよう</td><td>お早う</td><td>Selamat pagi</td></tr>
+            <tr><td>おは</td><td></td><td>Pagi! (santai)</td></tr>
+            <tr><td>こんにちは</td><td>今日は</td><td>Selamat siang</td></tr>
+            <tr><td>こんちゃ</td><td></td><td>Hai! (siang, santai)</td></tr>
+            <tr><td>こんばんは</td><td>今晩は</td><td>Selamat malam</td></tr>
+            <tr><td>おばんです</td><td></td><td>Selamat malam (dialek Kansai)</td></tr>
+            <tr><td>やあ</td><td></td><td>Halo! (santai)</td></tr>
+            <tr><td>よう</td><td></td><td>Hei! (santai)</td></tr>
+            <tr><td>ヤッホー</td><td></td><td>Hai! (informal, biasanya antar teman)</td></tr>
+            <tr><td>おっす</td><td></td><td>Hei! (maskulin, santai)</td></tr>
+            <tr><td>ちーっす</td><td></td><td>Hai! (santai, sangat kasual)</td></tr>
+            <tr><td>ひさしぶり</td><td>久しぶり</td><td>Lama tak jumpa</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="aisatsu-perpisahan">
+        <h2> (Aisatsu) Saat Berpisah</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ことば</th>
+              <th>かんじ</th>
+              <th>いみ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>またね</td><td></td><td>Sampai nanti</td></tr>
+            <tr><td>じゃね～</td><td></td><td>Dah! (santai)</td></tr>
+            <tr><td>バイバイ</td><td></td><td>Bye-bye</td></tr>
+            <tr><td>またな</td><td></td><td>Sampai nanti ya (kasual, maskulin)</td></tr>
+            <tr><td>元気でね</td><td></td><td>Jaga diri ya</td></tr>
+            <tr><td>じゃ、バイバイ</td><td></td><td>Oke, bye-bye</td></tr>
+            <tr><td>またこんど</td><td></td><td>Sampai lain kali</td></tr>
+            <tr><td>また明日</td><td>また明日</td><td>Sampai besok</td></tr>
+            <tr><td>じゃあまた</td><td></td><td>Sampai jumpa</td></tr>
+            <tr><td>おつかれ</td><td></td><td>Terima kasih atas kerja kerasnya (santai)</td></tr>
+            <tr><td>おつかれさまでした</td><td>お疲れ様でした</td><td>Terima kasih atas kerja kerasnya (formal)</td></tr>
+            <tr><td>おさきにしつれいします</td><td>お先に失礼します</td><td>Permisi saya pergi duluan</td></tr>
+            <tr><td>ではまた</td><td></td><td>Sampai jumpa (formal)</td></tr>
+            <tr><td>さよなら</td><td>さようなら</td><td>Selamat tinggal</td></tr>
+          </tbody>
+        </table>
+      </section>
+            
+      <section id="situasi-kehidupan">
+        <h2> Berdasarkan Situasi Kehidupan</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ことば</th>
+              <th>かんじ</th>
+              <th>いみ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>いただきます</td><td></td><td>Selamat makan (sebelum makan)</td></tr>
+            <tr><td>ごちそうさまでした</td><td></td><td>Terima kasih atas makanannya (setelah makan)</td></tr>
+            <tr><td>いってきます</td><td></td><td>Saya pergi dulu</td></tr>
+            <tr><td>いってらっしゃい</td><td></td><td>Hati-hati di jalan</td></tr>
+            <tr><td>ただいま</td><td></td><td>Saya pulang</td></tr>
+            <tr><td>おかえりなさい</td><td></td><td>Selamat datang kembali</td></tr>
+            <tr><td>おじゃまします</td><td></td><td>Permisi masuk</td></tr>
+            <tr><td>お疲れさまでした</td><td>お疲れ様でした</td><td>Terima kasih atas kerja kerasnya</td></tr>
+            <tr><td>はじめまして</td><td>初めまして</td><td>Salam kenal</td></tr>
+            <tr><td>よろしくおねがいします</td><td>よろしくお願いします</td><td>Mohon bantuannya</td></tr>
+            <tr><td>おはよう</td><td>お早う</td><td>Selamat pagi</td></tr>
+            <tr><td>おやすみなさい</td><td>お休みなさい</td><td>Selamat tidur</td></tr>
+            <tr><td>お誕生日おめでとう</td><td>お誕生日おめでとう</td><td>Selamat ulang tahun</td></tr>
+            <tr><td>おめでとうございます</td><td></td><td>Selamat</td></tr>
+            <tr><td>ごめん</td><td></td><td>Maaf (santai)</td></tr>
+            <tr><td>ごめんね</td><td></td><td>Maaf ya (santai)</td></tr>
+            <tr><td>ごめんなさい</td><td></td><td>Maaf</td></tr>
+            <tr><td>すみません</td><td></td><td>Permisi / Maaf</td></tr>
+            <tr><td>たいへんもうしわけありません</td><td>大変申し訳ありません</td><td>Saya sangat menyesal (formal)</td></tr>
+            <tr><td>ごめいわくかけてたいへんもうしわけありません</td><td>ご迷惑かけて大変申し訳ありません</td><td>Maaf telah merepotkan (sangat formal)</td></tr>
+            <tr><td>おせわになりした</td><td>お世話になりした。</td><td>Terima kasih banyak untuk segalanya</td></tr>
+        </tbody>
+        </table>
+      </section>
+      <section id="aisatsu-budaya">
+        <h2> Aisatsu Berdasarkan Budaya</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ことば</th>
+              <th>かんじ</th>
+              <th>いみ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>あけましておめでとうございます</td><td>明けましておめでとうございます</td><td>Selamat Tahun Baru</td></tr>
+            <tr><td>ことしもよろしくお願いします</td><td>今年もよろしくお願いします</td><td>Mohon kerja samanya tahun ini</td></tr>
+            <tr><td>メリークリスマス</td><td></td><td>Selamat Natal</td></tr>
+            <tr><td>ごけっこんおめでとうございます</td><td>ご結婚おめでとうございます</td><td>Selamat atas pernikahan Anda</td></tr>
+            <tr><td>すえながくおしあわせに</td><td>末永くお幸せに</td><td>Semoga berbahagia selamanya</td></tr>
+            <tr><td>おたんじょうびおめでとうございます</td><td>お誕生日おめでとうございます</td><td>Selamat Ulang Tahun</td></tr>
+            <tr><td>すてきな一ねんになりますように</td><td>素敵な一年になりますように</td><td>Semoga tahun ini menjadi tahun yang indah</td></tr>
+          </tbody>
+        </table>
+      </section>
+      
 
-    <script>
-        function goHome() {
-            // Ganti URL dengan alamat halaman home Anda
-            window.location.href = 'N5 index.html'; // Ubah 'index.html' sesuai kebutuhan
-        }
-    </script>
 </body>
 </html>
